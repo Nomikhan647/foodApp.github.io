@@ -1,0 +1,26 @@
+.logofooter{
+    padding: 10px;
+    margin: 10px;
+    margin-left: 30px;
+}
+.flex-containerfooter{
+    display: flex;
+    flex-direction: row;
+}
+.leftfooter{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+}
+.rightfooter{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+}
+@media (max-width:800px) {
+    .flex-containerfooter {
+        flex-direction: column;
+    }
+}

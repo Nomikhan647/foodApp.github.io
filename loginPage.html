@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="footer.CSS">
+    <link rel="stylesheet" href="navbar.CSS">
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 35%;
+            border-radius: 20px;
+            background-color: rgb(255, 205, 205);
+            margin: 100px;
+            padding: 40px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .Container {
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            justify-self: center;
+            padding: 20px;
+
+        }
+
+        .fields {
+            margin-bottom: 5px;
+        }
+
+        .text {
+            height: 40px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border-style: double;
+        }
+
+        #loginH {
+            margin-bottom: 30px;
+        }
+
+        .btnlogin {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f56b6b;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+            width: 250px;
+            height: 47px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .btnlogin:hover{
+            background-color: #d69d9d;
+        }
+        .forgot{
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            height: 20px;
+            border: none;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .forgot:hover{
+            color: #f56b6b
+        }
+    </style>
+
+   <!-- this section contain code for nav bar -->
+   <nav>
+    <ul class="topnav">
+        <img class="logo img-responsive" src="FoodSense.png" alt="demo" width="175" height="55"
+            style="margin-top: 5px;">
+        <a style="color: black;" href="index.html"><li id="Ilist" style="margin-left: 90px;">Home</li></a>
+        <a style="color: black;" href="about.html"><li id="Ilist">About</li></a>
+        <a style="color: black;" href="restaurent.html"><li id="Ilist">Restaurents</li></a>
+        <a style="color: black;" href="service.html"><li id="Ilist">Service</li></a>
+        <a style="color: black;" href="contact.html"><li id="Ilist">Contact</li></a>
+
+        <a href="formvald.html"><button id="right" type="button" class="btnnav ms-1 me-4 mt-3">Sign
+                Up</button></a>
+        <a href="loginPage.html"><button id="right" type="button" class="btnnav text-center mt-3">Login</button></a>
+        <li id="right" class="icon01" style="margin-top: 5px;"><i class="fas fa-search"></i></li>
+    </ul>
+
+</nav>
+
+
+
+    <header style="padding: 20px;">
+        <div class="container">
+            <form class="Container" action="">
+                <div class="row">
+                    <h3 class="fields" id="loginH">Login</h3>
+                    <label class="fields" for="username"> UserName</label>
+                    <input class="text" type="text" id="username" required>
+
+                    <label class="fields" for="pass">Password</label>
+                    <input class="text" type="password" id="pass" required>
+
+                    <button class="btnlogin">Login</button>
+                    <div>
+                        <p class="forgot">Forgot password?</p>
+                       <a style="color: black;" href="formvald.html"><p class="forgot">Create New Account?</p>
+                       </div></a> 
+                    
+                </div>
+            </form>
+        </div>
+    </header>
+
+
+
+    <!-- code for footer here -->
+    <footer>
+        <section class="logofooter">
+            <img src="FoodSense.png" alt="LOGo Image">
+        </section>
+        <section class="flex-containerfooter">
+            <div style="flex-grow: 1;" class="leftfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Why US?</h4>
+                    <p>Responsive</p>
+                    <p>Engagement</p>
+                    <p>Scale</p>
+                    <p>Watch the Demo</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Resources</h4>
+                    <p>Developers</p>
+                    <p>Apps</p>
+                    <p>Blog</p>
+                    <p>Help Center</p>
+                </div>
+            </div>
+            <div style="flex-grow: 1;" class="rightfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Company</h4>
+                    <p>About</p>
+                    <p>Merchant</p>
+                    <p>Career</p>
+                    <p>Contact</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Our Social Media</h4>
+                    <div style="margin-bottom: 10px; padding: 10px;">
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-facebook-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-instagram-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-twitter-square"></i>
+                    </div>
+                    <h4>Download App</h4>
+                    <div>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:yellowgreen; font-size: x-large;" class="fab fa-google-play"></i> Google
+                            Play</button>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:white; font-size: x-large;" class="fab fa-apple"></i> App Store</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-left: 70px; margin-right: 70px;">
+    </footer>
+</body>
+
+</html>

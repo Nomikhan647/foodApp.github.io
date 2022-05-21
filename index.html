@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="footer.CSS">
+</head>
+
+<body>
+    <style>
+        /* CSS for navigation bar */
+        nav ul {
+
+
+            padding-top: 5px;
+
+            padding-bottom: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 100%;
+
+        }
+
+        body nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 20px;
+
+        }
+
+        #Ilist {
+            font-size: 20px;
+        }
+
+        #Ilist:hover {
+            transition: 1s;
+            color: #f56b6b;
+            font-family: cursive;
+            cursor: pointer;
+        }
+
+        .icon01:hover {
+            color: #f56b6b;
+            transition: 2s;
+            transform: rotateY(180deg);
+            cursor: pointer;
+
+        }
+
+        .btnnav {
+            background-color: #f56b6b;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 85px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        ul.topnav {
+            float: left;
+            margin-bottom: 80px;
+        }
+
+        #right {
+            float: right;
+        }
+        .btnnav:hover{
+            background-color: #d69d9d;
+        }
+
+
+
+
+        /* CSS for header elements */
+        #btnOrder {
+            background-color: #f56b6b;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 130px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        #btnOrder:hover {
+            background-color: #d69d9d;
+        }
+
+        .flex-container01 {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            padding: 20px;
+
+
+        }
+
+        @media (max-width:800px) {
+            .flex-container01 {
+                flex-direction: column;
+            }
+        }
+
+        .helement1 {
+            margin: 20px;
+            padding: 20px;
+        }
+
+
+
+
+
+        /* CSS for portion ORder food faster */
+        .element02 {
+            margin: 10px;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        #playstore {
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(255, 205, 205);
+            border-radius: 20px;
+            height: 100%;
+        }
+
+        .element01 {
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flex-containerGp {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            margin: 20px;
+            justify-content: center;
+        }
+
+        @media (max-width:800px) {
+            .flex-containerGp {
+                flex-direction: column;
+            }
+        }
+
+
+
+
+
+
+        /* CSS for Features Portion */
+        .wefeature {
+            width: auto;
+            margin: 20px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            margin: 20px;
+            justify-content: center;
+
+        }
+
+        @media (max-width:800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        .fheading {
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+
+
+        /* CSS for menu portion */
+        .flex-container03 {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            border-radius: 10px;
+            justify-content: center;
+        }
+
+        .menu {
+            background-color: rgb(255, 205, 205);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .menu:hover {
+            background-color: #f56b6b;
+        }
+
+
+
+
+
+        /* CSS for Delicious food portion */
+        .row1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        @media (max-width:800px) {
+            .row1 {
+                flex-direction: column;
+            }
+        }
+
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        @media (max-width:800px) {
+            .row2 {
+                flex-direction: column;
+            }
+        }
+
+        .itemscontainer {
+            display: column;
+        }
+
+        @media (max-width:800px) {
+            .itemscontainer {
+                flex-direction: row;
+            }
+        }
+
+        .itemRow1 {
+
+            margin: 20px;
+            border-radius: 10px;
+            background-color: rgb(255, 219, 219);
+        }
+
+
+
+
+
+        /* CSS for partnership portion */
+        .partnership {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            padding: 10px;
+            justify-content: center;
+            margin-bottom: 100px;
+            align-items: center;
+        }
+
+        @media (max-width:800px) {
+            .partnership {
+                flex-direction: column;
+            }
+        }
+
+        .Pcourier {
+            background-color: #f5d2d2;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .Pmerchant {
+            background-color: #f5d2d2;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .merchantbtn {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .couriorbtn {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            padding: 10px;
+        }
+
+
+
+
+
+
+        /* CSS for footer elements */
+        .logofooter {
+            padding: 10px;
+            margin: 10px;
+            margin-left: 30px;
+        }
+
+        .flex-containerfooter {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .leftfooter {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .rightfooter {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        @media (max-width:800px) {
+            .flex-containerfooter {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+
+    <!-- this section contain code for nav bar -->
+    <nav>
+        <ul class="topnav">
+            <img class="logo img-responsive" src="FoodSense.png" alt="demo" width="175" height="55"
+                style="margin-top: 5px;">
+            <a style="color: black;" href="index.html"><li id="Ilist" style="margin-left: 90px;">Home</li></a>
+            <a style="color: black;" href="about.html"><li id="Ilist">About</li></a>
+            <a style="color: black;" href="restaurent.html"><li id="Ilist">Restaurents</li></a>
+            <a style="color: black;" href="service.html"><li id="Ilist">Service</li></a>
+            <a style="color: black;" href="contact.html"><li id="Ilist">Contact</li></a>
+
+            <a href="formvald.html"><button id="right" type="button" class="btnnav ms-1 me-4 mt-3">Sign
+                    Up</button></a>
+            <a href="loginPage.html"><button id="right" type="button" class="btnnav text-center mt-3">Login</button></a>
+            <li id="right" class="icon01" style="margin-top: 5px;"><i class="fas fa-search"></i></li>
+        </ul>
+
+    </nav>
+
+    <!-- this section containe header elements below navigation bar -->
+    <header class="flex-container01">
+        <div class="helement1 flex-fill text-center">
+            <h1 style="font-size: 50px; font: bolder; font-family:serif">Order Your <br> Food & Enjoy <br> The Taste
+            </h1><br>
+            <p>It is a long established fact that a reader will be distracted by <br> the readable content of a page
+                when
+                looking at its layout.</p><br>
+            <button id="btnOrder" class="text-center">Order Now</button>
+        </div>
+        <div class="helement1 flex-fill text-center ">
+            <img style="width: 100%; height: 100%; border-radius: 10px; object-fit:cover;" src="food2.jpeg" alt="">
+        </div>
+    </header>
+
+    <!-- this section tells us the simple way to order food faster -->
+    <section class="flex-containerGp">
+        <div class="element01">
+            <img src="MobileImg.png" alt="">
+        </div>
+        <div class="element02">
+            <div id="playstore">
+                <h2
+                    style="padding: 10px; margin: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 10px; margin: 5px;">
+                    Simple Way to Order <br> Your Food Faster</h2>
+                <p style="margin: 10px; padding: 10px;">Lorem Ipsum is simply dummy text of the printing and
+                    <br>typesetting industry.
+                    Lorem Ipsum has been
+                    the
+                    industry's standard dummy text <br> ever since the 1500s, when an unknown printer took a galley of
+                    type and
+                    <br>
+                    scrambled it to make a type specimen book.
+                </p>
+                <div style="margin: 10px; padding: 10px;">
+                    <button
+                        style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                            style="color:yellowgreen; font-size: x-large;" class="fab fa-google-play"></i> Google
+                        Play</button>
+                    <button
+                        style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                            style="color:white; font-size: x-large;" class="fab fa-apple"></i> App Store</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- this portion contain features that we provide -->
+    <div class="wefeature col-sm-12 col-md-12 col-lg-12 text-center">
+        <h1 style="font-family:serif; margin: 10px;"><b>What we
+                Feature</b></h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and <br>typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text <br> ever since the 1500s, when an unknown printer took a galley of type and
+            <br>
+            scrambled it to make a type specimen book.
+        </p>
+    </div>
+    <section class="flex-container text-center">
+        <div class="courier">
+            <img src="courier.png" alt="" width="150px" height="150px">
+            <h3 class="fheading">The Best courier</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="easyuse">
+            <img src="easyuse.png" alt="" width="150px" height="150px">
+            <h3 class="fheading">Easy To Use</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="support">
+            <img src="support.png" alt="" width="150px" height="150px">
+            <h3 class="fheading">24/7 Support</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </section>
+
+    <!-- this is menu portion -->
+    <div class="wefeature col-sm-12 col-md-12 col-lg-12 text-center">
+        <h1 style="font-family:serif; margin: 10px;"><b>Our Menus</b> </h1>
+    </div>
+    <section class="flex-container03">
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-pizza-slice"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Pizza</b></p>
+        </div>
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-pizza-slice"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Asian</b></p>
+        </div>
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-hamburger"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Burger</b></p>
+        </div>
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-glass-cheers"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Drink</b></p>
+        </div>
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-pizza-slice"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Salad</b></p>
+        </div>
+        <div class="menu">
+            <i style="margin: 10px; padding: 10px; font-size:xxx-large; color: white;" class="fas fa-birthday-cake"></i>
+            <p style="margin: 5px; padding: 5px; font-size: 24px;"><b>Bakery</b></p>
+        </div>
+    </section>
+
+    <!-- portion with heading Delicious food for you -->
+    <section>
+        <div class="wefeature col-sm-12 col-md-12 col-lg-12 text-center">
+            <h1 style="font-family:serif; margin: 10px;"><b>Delicious food for You</b> </h1>
+        </div>
+
+        <div class="itemscontainer">
+            <div class="row1">
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item01.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Grilled Salmon Fillet</b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$10.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item02.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Chicken Teriyaki Sauce</b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$5.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item03.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Cheese Stuffed Burgers</b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$8.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row2">
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item4.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Seafood Salad</b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$9.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item05.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Salad with Calamari</b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$7.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="itemRow1" style="width: fit-content;">
+                    <img src="item06.png" alt="">
+                    <h4 style="margin: 10px; padding-left: 10px;"><b>Baked Mushrooms </b> </h4>
+                    <p style="margin: 10px; padding-left: 10px;">this is for you</p>
+                    <div class="couriorbtn">
+                        <b>
+                            <p style="font-size: 25px; padding: 5px;">$6.99</p>
+                        </b>
+                        <button style="margin-left: 30px;" id="btnOrder" class="text-center">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- this section is for partnership -->
+    <div class="wefeature col-sm-12 col-md-12 col-lg-12 text-center">
+        <h1 style="font-family:serif; margin: 10px;"><b>Want to Join Partnership?</b> </h1>
+    </div>
+    <section class="partnership">
+        <div class="Pcourier" style="width: fit-content;">
+            <img style="border-radius: 10px; margin-bottom: 20px;" src="Pcourier.png" alt="image here">
+            <div class="couriorbtn">
+                <b>
+                    <p style="font-size: 25px; padding: 5px;">Join Courior</p>
+                </b>
+                <button style="margin-left: 30px;" id="btnOrder" class="text-center">Read More</button>
+            </div>
+        </div>
+        <div class="Pmerchant" style="width: fit-content;">
+            <img style="border-radius: 10px; margin-bottom: 20px;" src="Pmerchant.png" alt="image here">
+            <div class="merchantbtn">
+                <b>
+                    <p style="font-size: 25px; padding: 5px;">Join Merchant</p>
+                </b>
+                <button style="margin-left: 30px;" id="btnOrder" class="text-center">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- this section contain footer code -->
+    <footer>
+        <section class="logofooter">
+            <img src="FoodSense.png" alt="LOGo Image">
+        </section>
+        <section class="flex-containerfooter">
+            <div style="flex-grow: 1;" class="leftfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Why US?</h4>
+                    <p>Responsive</p>
+                    <p>Engagement</p>
+                    <p>Scale</p>
+                    <p>Watch the Demo</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Resources</h4>
+                    <p>Developers</p>
+                    <p>Apps</p>
+                    <p>Blog</p>
+                    <p>Help Center</p>
+                </div>
+            </div>
+            <div style="flex-grow: 1;" class="rightfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Company</h4>
+                    <p>About</p>
+                    <p>Merchant</p>
+                    <p>Career</p>
+                    <p>Contact</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Our Social Media</h4>
+                    <div style="margin-bottom: 10px; padding: 10px;">
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-facebook-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-instagram-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-twitter-square"></i>
+                    </div>
+                    <h4>Download App</h4>
+                    <div>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:yellowgreen; font-size: x-large;" class="fab fa-google-play"></i> Google
+                            Play</button>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:white; font-size: x-large;" class="fab fa-apple"></i> App Store</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-left: 70px; margin-right: 70px;">
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation using javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="footer.CSS">
+    <link rel="stylesheet" href="navbar.CSS">
+</head>
+
+<body>
+    <style>
+        .container {
+            width: fit-content;
+            border-radius: 10px;
+            background-color: rgb(255, 205, 205);
+            margin: 100px;
+            padding: 40px;
+        }
+
+        .formError {
+            color: red;
+        }
+
+        .felement {
+            margin-bottom: 5px;
+        }
+
+        #btnsubmit {
+            background-color: #f56b6b;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            width: 130px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        #btnsubmit:hover {
+            background-color: #d69d9d;
+        }
+
+        .felement {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width:800px) {
+            .felement {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+     <!-- this section contain code for nav bar -->
+     <nav>
+        <ul class="topnav">
+            <img class="logo img-responsive" src="FoodSense.png" alt="demo" width="175" height="55"
+                style="margin-top: 5px;">
+            <a style="color: black;" href="index.html"><li id="Ilist" style="margin-left: 90px;">Home</li></a>
+            <a style="color: black;" href="about.html"><li id="Ilist">About</li></a>
+            <a style="color: black;" href="restaurent.html"><li id="Ilist">Restaurents</li></a>
+            <a style="color: black;" href="service.html"><li id="Ilist">Service</li></a>
+            <a style="color: black;" href="contact.html"><li id="Ilist">Contact</li></a>
+
+            <a href="formvald.html"><button id="right" type="button" class="btnnav ms-1 me-4 mt-3">Sign
+                    Up</button></a>
+            <a href="loginPage.html"><button id="right" type="button" class="btnnav text-center mt-3">Login</button></a>
+            <li id="right" class="icon01" style="margin-top: 5px;"><i class="fas fa-search"></i></li>
+        </ul>
+
+    </nav>
+
+    <!-- code for sign up form here -->
+    <section style="padding: 20px;">
+        <div class="container">
+
+            <form class="Container" name="myForm" onsubmit="return validateForm()">
+                <div class="row">
+                    <h4 style="margin-left: 40px; ">Sign Up</h4>
+                    <p style="margin-left: 40px; margin-bottom: 20px;">Please fill this form to create your account</p>
+
+                    <div id="name" class="felement">
+                        <label for="fname" class="col-sm-12 col-md-3 col-lg-3 mb-1">First Name</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px;" type="text"
+                            name="firstname" id="fname">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div id="lname" class="felement">
+                        <label for="lname" class="col-sm-12 col-md-3 col-lg-3 mb-1">Last Name</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px;" type="text"
+                            name="lastname" id="Lname">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+
+                    </div>
+
+                    <div id="email" class="felement">
+                        <label for="emailid" class="col-sm-12 col-md-3 col-lg-3 mb-1">Email</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px;" type="email"
+                            name="Email" id="emailid" placeholder="xyz@gmail.com">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div id="phone" class="felement">
+                        <label for="PhNo" class="col-sm-12 col-md-3 col-lg-3 mb-1">phoneNo</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px;" type="tel"
+                            name="phoneNo" id="PhNo" placeholder="03XXXXXXXXX">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div id="address" class="felement">
+                        <label for="add" class="col-sm-12 col-md-3 col-lg-3 mb-1">Address</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px;" type="text"
+                            name="Address" id="add">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+
+                    <div id="cnic" class="felement">
+                        <label for="nic" class="col-sm-12 col-md-3 col-lg-3 mb-1">CNIC</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px" type="tel"
+                            name="CNIC" id="NIC" placeholder="XXXXX-XXXXXXX-X">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div id="pass" class="felement">
+                        <label for="nic" class="col-sm-12 col-md-3 col-lg-3 mb-1">Password</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px" type="tel"
+                            name="CNIC" id="passwd" placeholder="Example123@">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div id="cpass" class="felement">
+                        <label for="nic" class="col-sm-12 col-md-3 col-lg-3 mb-1">Confirm Password</label>
+                        <input class="col-sm-10 col-md-7 col-lg-7 mb-1" style="border-radius: 5px" type="tel"
+                            name="CNIC" id="cpasswd" placeholder="Example123@">
+                        <b><span class="formError col-sm-2 col-md-2 col-lg-2"></span></b>
+                    </div>
+
+                    <div class="text-center mt-1">
+                        <input id="btnsubmit" type="submit">
+                    </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- code for footer here -->
+    <footer>
+        <section class="logofooter">
+            <img src="FoodSense.png" alt="LOGo Image">
+        </section>
+        <section class="flex-containerfooter">
+            <div style="flex-grow: 1;" class="leftfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Why US?</h4>
+                    <p>Responsive</p>
+                    <p>Engagement</p>
+                    <p>Scale</p>
+                    <p>Watch the Demo</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Resources</h4>
+                    <p>Developers</p>
+                    <p>Apps</p>
+                    <p>Blog</p>
+                    <p>Help Center</p>
+                </div>
+            </div>
+            <div style="flex-grow: 1;" class="rightfooter text-center">
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Company</h4>
+                    <p>About</p>
+                    <p>Merchant</p>
+                    <p>Career</p>
+                    <p>Contact</p>
+                </div>
+                <div style="flex-grow: 1;">
+                    <h4 style="margin-bottom: 20px;">Our Social Media</h4>
+                    <div style="margin-bottom: 10px; padding: 10px;">
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-facebook-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-instagram-square"></i>
+                        <i style="font-size: x-large; color:#f56b6b;" class="fab fa-twitter-square"></i>
+                    </div>
+                    <h4>Download App</h4>
+                    <div>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:yellowgreen; font-size: x-large;" class="fab fa-google-play"></i> Google
+                            Play</button>
+                        <button
+                            style="border-radius:5px; background-color: black; color: white; padding: 10px; margin: 5px;"><i
+                                style="color:white; font-size: x-large;" class="fab fa-apple"></i> App Store</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-left: 70px; margin-right: 70px;">
+    </footer>
+</body>
+<script>
+    function seterror(id, error) {
+        element = document.getElementById(id);
+        element.getElementsByClassName('formError')[0].innerHTML = '';
+        element.getElementsByClassName('formError')[0].innerHTML = error;
+    }
+    function validateForm() {
+        var returnval = true;
+        // validation for firstname
+        var name = document.forms['myForm']['fname'].value;
+        if (name.length < 3) {
+            seterror("name", "");
+            seterror("name", "*too short");
+            returnval = false;
+        }
+        else {
+            seterror("name", "");
+        }
+        if (name.length == 0) {
+            seterror("name", "");
+            seterror("name", "*Required");
+            returnval = false;
+        }
+
+        // validation for last name
+        var lastname = document.forms['myForm']['Lname'].value;
+        if (lastname.length < 3) {
+            seterror("lname", "*too short");
+            returnval = false;
+        }
+        else {
+            seterror("lname", "");
+        }
+        if (lastname.length == 0) {
+            seterror("lname", "*Required");
+            returnval = false;
+        }
+
+
+        // validation of email
+        var email = document.forms['myForm']['emailid'].value;
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (email.length != 0) {
+            if (email.length > 40) {
+                seterror("email", "*too long");
+            }
+            else if (email.match(mailformat)) {
+                seterror("email", "");
+            }
+            else {
+                seterror("email", "invalid email");
+                returnval = false;
+            }
+        }
+        else {
+            seterror("email", "");
+            seterror("email", "*Required");
+            returnval = false;
+        }
+
+
+
+        // validation of Phone NO
+        var phone = document.forms['myForm']['PhNo'].value;
+        if (phone.length != 0) {
+            if (phone.length != 11) {
+                seterror("phone", "*Must be 11 digits");
+                returnval = false;
+            }
+            else {
+                seterror("phone", "");
+            }
+        }
+        else {
+            seterror("phone", "*Required");
+        }
+
+
+        // validation of Address
+        var Address = document.forms['myForm']['add'].value;
+        if (Address.length != 0) {
+            if (Address.length > 100) {
+                seterror("address", "*Too Long Adress");
+                returnval = false;
+            }
+            else {
+                seterror("address", "");
+            }
+
+        }
+        else {
+            seterror("address", "*Required");
+        }
+
+        // validation of CNIC
+        var nic = document.forms['myForm']['NIC'].value;
+        var cnicformat = "^[0-9]{5}-[0-9]{7}-[0-9]$";
+        if (nic.length != 0) {
+            if (nic.match(cnicformat)) {
+                seterror("cnic", "");
+            }
+            else {
+                seterror("cnic", "*invalid format");
+                returnval = false;
+            }
+        }
+        else {
+            seterror("cnic", "*Required");
+        }
+
+
+        // password validation
+        var password = document.forms['myForm']['passwd'].value;
+        var passformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (password.length != 0) {
+            if (password.length < 8 || password.length > 15) {
+                seterror("pass", "must be 8 to 15 digits");
+                returnval = false;
+            }
+            else {
+                if (password.match(passformat)) {
+                    seterror("pass", "");
+                }
+                else {
+                    seterror("pass", "invalid format");
+                    returnval = false;
+                }
+            }
+        }
+        else {
+            seterror("pass", "*Required")
+            returnval = false;
+        }
+
+
+        // Confirm Password Validation
+        var cpassword = document.forms['myForm']['cpasswd'].value;
+        if (cpassword.length != 0) {
+            if (cpassword != password) {
+                seterror("cpass", "*not match");
+                returnval = false;
+            }
+            else {
+                seterror("cpass", "")
+            }
+
+        }
+        else {
+            seterror("cpass", "*Required");
+            returnval = false;
+        }
+        return returnval;
+    }
+</script>
+
+</html>

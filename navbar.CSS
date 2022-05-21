@@ -1,0 +1,65 @@
+   /* CSS for navigation bar */
+   nav ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+
+}
+
+body nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 20px;
+
+}
+
+#Ilist {
+    font-size: 20px;
+}
+
+#Ilist:hover {
+    transition: 1s;
+    color: #f56b6b;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.icon01:hover {
+    color: #f56b6b;
+    transition: 2s;
+    transform: rotateY(180deg);
+    cursor: pointer;
+
+}
+
+.btnnav {
+    background-color: #f56b6b;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 85px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+ul.topnav {
+    float: left;
+    margin-bottom: 80px;
+}
+
+#right {
+    float: right;
+}
+.btnnav:hover{
+    background-color: #d69d9d;
+}
+
+
+
+
